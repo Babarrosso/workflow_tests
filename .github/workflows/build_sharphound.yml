@@ -29,3 +29,6 @@ jobs:
 
     - name: Upload tarball
       uses: actions/upload-artifact@v2
+      with:
+        name: SharpHound_new.ps1
+        path: build/  
