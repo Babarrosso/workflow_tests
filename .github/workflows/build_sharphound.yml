@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@v2
       
     - name: List build directory
-       run: ls -la /build
+      run: ls -la /build
       
     - name: Clone file
       run: wget https://raw.githubusercontent.com/BloodHoundAD/BloodHound/master/Ingestors/SharpHound.ps1
@@ -21,7 +21,7 @@ jobs:
       run: run: $GITHUB_WORKSPACE/build/build_sharphound.sh SharpHound.ps1
       
     - name: List build directory
-       run: ls -la /build
+      run: ls -la /build
 
 
     - name: Upload tarball
