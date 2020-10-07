@@ -18,7 +18,7 @@ jobs:
       run: wget https://raw.githubusercontent.com/BloodHoundAD/BloodHound/master/Ingestors/SharpHound.ps1
 
     - name: Adjusting the file
-      run: run: $GITHUB_WORKSPACE/build/build_sharphound.sh SharpHound.ps1
+      run: $GITHUB_WORKSPACE/build/build_sharphound.sh SharpHound.ps1
       
     - name: List build directory
       run: ls -la /build
