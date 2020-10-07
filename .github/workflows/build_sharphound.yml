@@ -1,0 +1,28 @@
+name: Adjusting ShapHound.ps1 PowerShell Script
+
+on:
+  workflow_dispatch
+
+jobs:
+  build:
+    name: Build new SharpHound PowerShell Script
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Checkout
+      uses: actions/checkout@v2
+      
+    - name: List build directory
+       run: ls -la /build
+      
+    - name: Clone file
+      run: wget https://raw.githubusercontent.com/BloodHoundAD/BloodHound/master/Ingestors/SharpHound.ps1
+
+    - name: Adjusting the file
+      run: run: $GITHUB_WORKSPACE/build/build_sharphound.sh SharpHound.ps1
+      
+    - name: List build directory
+       run: ls -la /build
+
+
+    - name: Upload tarball
+      uses: actions/upload-artifact@v2
