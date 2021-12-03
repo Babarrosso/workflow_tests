@@ -15,7 +15,7 @@ jobs:
       run: ls -la build/
       
     - name: Clone file
-      run: wget https://raw.githubusercontent.com/BloodHoundAD/BloodHound/master/Ingestors/SharpHound.ps1
+      run: wget https://raw.githubusercontent.com/BloodHoundAD/BloodHound/master/Collectors/SharpHound.ps1
 
     - name: Adjusting the file
       run: $GITHUB_WORKSPACE/build/build_sharphound.sh SharpHound.ps1
